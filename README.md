@@ -1,11 +1,21 @@
 # commander-rxjs
 
+  <!-- NPM: -->
+<a href="https://www.npmjs.com/package/commander-rxjs">
+  <img src="https://img.shields.io/npm/v/commander-rxjs.svg?style=flat"/>
+  <!-- TravisCI: -->
+</a><a href="https://travis-ci.org/nickbreaton/commander-rxjs">
+  <img src="https://img.shields.io/travis/nickbreaton/commander-rxjs/master.svg?style=flat"/>
+</a>
+
 A simple adapter to easily use [RxJS](https://github.com/ReactiveX/RxJS) with [commander](https://github.com/tj/commander.js).
 
 ## Installation
 
 ```
-$ npm install commander rxjs commander-rxjs
+$ npm install rxjs commander
+
+$ npm install commander-rxjs
 ```
 
 ## Convert commands to observables
