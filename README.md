@@ -1,6 +1,6 @@
 # commander-rxjs
 
-A simple adapter to easily use RxJS with commander.
+A simple adapter to easily use [RxJS](https://github.com/ReactiveX/RxJS) with [commander](https://github.com/tj/commander.js).
 
 ## Installation
 
