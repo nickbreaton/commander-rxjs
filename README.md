@@ -26,16 +26,16 @@ At anytime in the commander process, an `observe()` function can be chained prov
 import program from 'commander-rxjs';
 
 program
-  .command('eat [food]')  // commander function
-  .option('--no-chew')    // commander function
-  .observe()              // convert to observable stream
-  .do(command => {        // RxJS function
-    console.log(command.args);    // --> { food: "applesauce" }
-    console.log(command.options); // --> { noChew: true }
+  .command('order [item]')       // commander function
+  .option('--two-day-shipping')  // commander function
+  .observe()                     // convert to observable stream
+  .do(command => {               // RxJS function
+    console.log(command.args);     // --> { item: "JavaScript Stickers" }
+    console.log(command.options);  // --> { twoDayShipping: true }
   })
-  .subscribe();           // RxJS function
+  .subscribe();                  // RxJS function
 
-// INPUT: your-app eat applesauce --no-chew
+// INPUT: amazon-cli order "JavaScript Stickers" --two-day-shipping
 program
   .parse(process.argv)
 ```
