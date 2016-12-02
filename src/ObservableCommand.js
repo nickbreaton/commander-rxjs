@@ -48,7 +48,6 @@ export default class ObservableCommand extends Command {
           // match option to those stored in 'command'
           .forEach(option => {
             options[option] = command[option];
-            console.log(options);
           });
 
         // pass args, options, and original observable command
