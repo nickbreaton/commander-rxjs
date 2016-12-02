@@ -15,7 +15,7 @@ test('observes an object with args and options', async () => {
   // create a promise from observable
   const promise = program
     .command('order [item]')
-    .option('--two-day-shipping')
+    .option('-t, --two-day-shipping')
     .observe()
     .toPromise();
 

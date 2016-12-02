@@ -36,23 +36,19 @@ export default class ObservableCommand extends Command {
 
         // parse options providing a camelCased list
         const options = {};
-        Object.keys(command).filter(key => {
-          // Commander reserved words
-          switch (key) {
-            case 'commands':
-            case 'options':
-            case 'parent':
-              return false;
-          }
-          // dont include private variables
-          if (key[0] === '_')
-            return false;
-          // allow remaining words
-          return true;
-        })
-          .forEach(key => {
-            // add option and value to options
-            options[key] = command[key];
+        command.options.map(option => option.long)
+          // remove flag dashes
+          .map(option => option.replace(/^(--|-)/, ''))
+          // convert to camel case
+          .map(camelCase)
+          // capitalize if one character
+          .map(option => {
+            return option.length === 1 ? option.toUpperCase() : option;
+          })
+          // match option to those stored in 'command'
+          .forEach(option => {
+            options[option] = command[option];
+            console.log(options);
           });
 
         // pass args, options, and original observable command
