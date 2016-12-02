@@ -1,6 +1,6 @@
 {
   "name": "commander-rxjs",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A simple adapter to easily use RxJS with commander.",
   "main": "index.js",
   "repository": "https://github.com/nickbreaton/commander-rxjs.git",
@@ -27,7 +27,9 @@
     "rxjs": "~5.0.0 || ^5.0.0-rc.1"
   },
   "scripts": {
-    "build": "rimraf dist && babel src -d dist --ignore spec.js",
+    "build": "babel src -d dist --ignore spec.js",
+    "prebuild": "rimraf dist",
+    "prepublish": "npm run build",
     "test": "jest"
   }
 }
