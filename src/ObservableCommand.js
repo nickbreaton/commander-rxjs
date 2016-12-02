@@ -27,15 +27,36 @@ export default class ObservableCommand extends Command {
         // fetch command from end of arguments
         const command = arguments[arguments.length - 1];
 
-        // parse params providing a camelCased list
-        const params = {};
+        // parse args providing a camelCased list
+        const args = {};
         command._args.forEach((arg, i) => {
           const name = camelCase(arg.name);
-          params[name] = arguments[i];
+          args[name] = arguments[i];
         });
 
-        // continue
-        observer.next({ params, command });
+        // parse options providing a camelCased list
+        const options = {};
+        Object.keys(command).filter(key => {
+          // Commander reserved words
+          switch (key) {
+            case 'commands':
+            case 'options':
+            case 'parent':
+              return false;
+          }
+          // dont include private variables
+          if (key[0] === '_')
+            return false;
+          // allow remaining words
+          return true;
+        })
+          .forEach(key => {
+            // add option and value to options
+            options[key] = command[key];
+          });
+
+        // pass args, options, and original observable command
+        observer.next({ args, options, command });
         observer.complete();
       });
     });

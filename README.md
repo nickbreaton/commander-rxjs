@@ -30,7 +30,7 @@ program
   .option('--no-chew')    // commander function
   .observe()              // convert to observable stream
   .do(command => {        // RxJS function
-    console.log(command.params);  // --> { food: "applesauce" }
+    console.log(command.args);    // --> { food: "applesauce" }
     console.log(command.options); // --> { noChew: true }
   })
   .subscribe();           // RxJS function
