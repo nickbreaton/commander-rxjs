@@ -20,7 +20,7 @@
   },
   "peerDependencies": {
     "commander": "2.x",
-    "rxjs": "5.x"
+    "rxjs": "~5.0.0 || ^5.0.0-rc.1"
   },
   "scripts": {
     "build": "rimraf dist && babel src -d dist --ignore spec.js",

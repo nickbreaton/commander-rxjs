@@ -1,5 +1,5 @@
-import { Observable } from 'rxjs';
 import { Command } from 'commander';
+import { Observable } from 'rxjs';
 import camelCase from 'camel-case';
 
 export default class ObservableCommand extends Command {
@@ -24,6 +24,7 @@ export default class ObservableCommand extends Command {
     return Observable.create(observer => {
       // when action runs, next and complete observer
       this.action(function () {
+        // fetch command from end of arguments
         const command = arguments[arguments.length - 1];
 
         // parse params providing a camelCased list
