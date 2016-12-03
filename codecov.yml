@@ -1,5 +1,0 @@
-install:
-  - npm install -g codecov
-script:
-  - npm run coverage
-  - codecov
