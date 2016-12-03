@@ -2,4 +2,5 @@
 .git
 .gitignore
 .travis.yml
+examples
 src
