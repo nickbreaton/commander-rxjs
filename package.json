@@ -6,6 +6,22 @@
   "repository": "https://github.com/nickbreaton/commander-rxjs.git",
   "author": "nickbreaton",
   "license": "MIT",
+  "engines": {
+    "node": ">=4.0.0"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "prebuild": "rimraf dist",
+    "build": "babel src -d dist --ignore spec.js",
+    "coverage": "jest --coverage",
+    "postcoverage": "opn coverage/lcov-report/index.html",
+    "example:calculator": "babel-node examples/calculator",
+    "example:json-fetch": "babel-node examples/json-fetch",
+    "prepublish": "npm run build",
+    "test": "jest"
+  },
   "dependencies": {
     "camel-case": "^3.0.0"
   },
@@ -20,19 +36,13 @@
     "commander": "^2.9.0",
     "jest-cli": "^17.0.3",
     "node-fetch": "^1.6.3",
+    "opn-cli": "^3.1.0",
     "rimraf": "^2.5.4",
-    "rxjs": "^5.0.0-rc.4"
+    "rxjs": "^5.0.0-rc.4",
+    "serve": "^1.4.0"
   },
   "peerDependencies": {
     "commander": "2.x",
     "rxjs": "~5.0.0 || ^5.0.0-rc.1"
-  },
-  "scripts": {
-    "build": "babel src -d dist --ignore spec.js",
-    "example:calculator": "babel-node examples/calculator",
-    "example:json-fetch": "babel-node examples/json-fetch",
-    "prebuild": "rimraf dist",
-    "prepublish": "npm run build",
-    "test": "jest"
   }
 }
