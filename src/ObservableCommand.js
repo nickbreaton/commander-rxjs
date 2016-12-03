@@ -27,14 +27,14 @@ export default class ObservableCommand extends Command {
         // fetch command from end of arguments
         const command = arguments[arguments.length - 1];
 
-        // parse args providing a camelCased list
+        // parse args providing a camel case list
         const args = {};
         command._args.forEach((arg, i) => {
           const name = camelCase(arg.name);
           args[name] = arguments[i];
         });
 
-        // parse options providing a camelCased list
+        // parse options providing a camel case list
         const options = {};
         command.options.map(option => option.long)
           // remove flag dashes

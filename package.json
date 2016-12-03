@@ -2,7 +2,7 @@
   "name": "commander-rxjs",
   "version": "0.0.2",
   "description": "A simple adapter to easily use RxJS with commander.",
-  "main": "index.js",
+  "main": "dist/index.js",
   "repository": "https://github.com/nickbreaton/commander-rxjs.git",
   "author": "nickbreaton",
   "license": "MIT",
@@ -19,6 +19,7 @@
     "babel-preset-es2017": "^6.16.0",
     "commander": "^2.9.0",
     "jest-cli": "^17.0.3",
+    "node-fetch": "^1.6.3",
     "rimraf": "^2.5.4",
     "rxjs": "^5.0.0-rc.4"
   },
@@ -27,6 +28,7 @@
     "rxjs": "~5.0.0 || ^5.0.0-rc.1"
   },
   "scripts": {
+    "babel": "babel-node",
     "build": "babel src -d dist --ignore spec.js",
     "prebuild": "rimraf dist",
     "prepublish": "npm run build",
