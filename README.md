@@ -6,6 +6,9 @@
   <!-- TravisCI: -->
 </a><a href="https://travis-ci.org/nickbreaton/commander-rxjs">
   <img src="https://img.shields.io/travis/nickbreaton/commander-rxjs/master.svg?style=flat"/>
+  <!-- Codecov: -->
+</a><a href="https://codecov.io/gh/nickbreaton/commander-rxjs">
+  <img src="https://img.shields.io/codecov/c/github/nickbreaton/commander-rxjs.svg?style=flat"/>
 </a>
 
 A simple adapter to easily use [RxJS](https://github.com/ReactiveX/RxJS) with [commander](https://github.com/tj/commander.js).
