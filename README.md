@@ -13,14 +13,20 @@ A simple adapter to easily use [RxJS](https://github.com/ReactiveX/RxJS) with [c
 ## Installation
 
 ```
-$ npm install rxjs commander
-
 $ npm install commander-rxjs
+```
+
+**Note:** `commander` and `rxjs` are both specified as peer dependencies. You must install them alongside `commander-rxjs`.
+
+```
+$ npm install commander rxjs
 ```
 
 ## Convert commands to observables
 
-At anytime in the commander process, an `observe()` function can be chained providing an RxJS observable when the command is executed.
+`commander-rxjs` provides a `.observe()` function to convert commands an RxJS observable.
+
+**Note:** The `.observe()` can be used any place commander's `.action(cb)` function can be used.
 
 ```js
 import program from 'commander-rxjs';
