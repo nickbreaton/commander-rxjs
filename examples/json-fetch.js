@@ -12,4 +12,4 @@ program
   .subscribe();
 
 program
-  .parse([ 'node', 'json-fetcher', 'http://echo.jsontest.com/hello/world' ]);
+  .parse([ 'node', 'json-fetch', 'http://echo.jsontest.com/hello/world' ]);
