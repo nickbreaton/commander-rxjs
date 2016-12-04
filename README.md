@@ -1,15 +1,8 @@
 # commander-rxjs
 
-  <!-- NPM: -->
-<a href="https://www.npmjs.com/package/commander-rxjs">
-  <img src="https://img.shields.io/npm/v/commander-rxjs.svg?style=flat"/>
-  <!-- TravisCI: -->
-</a><a href="https://travis-ci.org/nickbreaton/commander-rxjs">
-  <img src="https://img.shields.io/travis/nickbreaton/commander-rxjs/master.svg?style=flat"/>
-  <!-- Codecov: -->
-</a><a href="https://codecov.io/gh/nickbreaton/commander-rxjs">
-  <img src="https://img.shields.io/codecov/c/github/nickbreaton/commander-rxjs.svg?style=flat"/>
-</a>
+<!-- npm -->[![](https://img.shields.io/npm/v/commander-rxjs.svg?style=flat)](https://www.npmjs.com/package/commander-rxjs) 
+<!-- travisci -->[![](https://img.shields.io/travis/nickbreaton/commander-rxjs/master.svg?style=flat)](https://travis-ci.org/nickbreaton/commander-rxjs)
+<!-- codecov --> [![](https://img.shields.io/codecov/c/github/nickbreaton/commander-rxjs.svg?style=flat)](https://codecov.io/gh/nickbreaton/commander-rxjs)
 
 A simple adapter to easily use [RxJS](https://github.com/ReactiveX/RxJS) with [commander](https://github.com/tj/commander.js).
 
