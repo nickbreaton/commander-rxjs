@@ -4,7 +4,11 @@
 [![TravisCI](https://img.shields.io/travis/nickbreaton/commander-rxjs/master.svg?style=flat-square)](https://travis-ci.org/nickbreaton/commander-rxjs)
 [![Codecov](https://img.shields.io/codecov/c/github/nickbreaton/commander-rxjs.svg?style=flat-square)](https://codecov.io/gh/nickbreaton/commander-rxjs)
 
+<!-- START_DESCRIPTION -->
+
 A simple adapter to easily use [RxJS](https://github.com/ReactiveX/RxJS) with [commander](https://github.com/tj/commander.js).
+
+<!-- END_DESCRIPTION -->
 
 ## Installation
 
