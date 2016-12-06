@@ -28,16 +28,23 @@ $ npm install commander rxjs
 import program from 'commander-rxjs';
 
 program
-  .command('order [item]')       // commander function
-  .option('--two-day-shipping')  // commander function
-  .observe()                     // convert to observable stream
-  .do(command => {               // RxJS function
-    console.log(command.args);     // --> { item: "JavaScript Stickers" }
-    console.log(command.options);  // --> { twoDayShipping: true }
+  .command('order [item]')       
+  .option('--two-day-shipping')  
+  .observe()                     
+  .do(command => {               
+    console.log(command.args, command.options);     
+    // --> { item: "JavaScript Stickers" }
+    // --> { twoDayShipping: true }
   })
-  .subscribe();                  // RxJS function
+  .subscribe();                  
 
 // INPUT: amazon-cli order "JavaScript Stickers" --two-day-shipping
 program
   .parse(process.argv)
 ```
+
+## Examples
+
+Be sure to checkout all of the [examples](https://github.com/nickbreaton/commander-rxjs/tree/master/examples).
+
+Then can easily be run by `npm run example:[example-name]`.
