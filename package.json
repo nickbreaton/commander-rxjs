@@ -14,13 +14,13 @@
   ],
   "scripts": {
     "prebuild": "rimraf dist",
-    "build": "babel src -d dist --ignore spec.js",
+    "build": "babel src -d dist --ignore test.js",
     "coverage": "jest --coverage",
     "postcoverage": "opn coverage/lcov-report/index.html",
     "example:calculator": "babel-node examples/calculator",
     "example:json-fetch": "babel-node examples/json-fetch",
     "prepublish": "npm run build",
-    "test": "jest"
+    "test": "jest --verbose"
   },
   "dependencies": {
     "camel-case": "^3.0.0"
