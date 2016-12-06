@@ -1,6 +1,6 @@
 {
   "name": "commander-rxjs",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "A simple adapter to easily use RxJS with commander.",
   "main": "dist/index.js",
   "repository": "https://github.com/nickbreaton/commander-rxjs.git",
