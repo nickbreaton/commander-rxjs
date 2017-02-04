@@ -6,7 +6,7 @@
 
 <!-- START_DESCRIPTION -->
 
-A simple adapter to easily use [RxJS](https://github.com/ReactiveX/RxJS) with [commander](https://github.com/tj/commander.js).
+A simple adapter to easily use [RxJS](https://github.com/ReactiveX/RxJS) with [Commander](https://github.com/tj/commander.js).
 
 <!-- END_DESCRIPTION -->
 
